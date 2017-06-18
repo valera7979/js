@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+			function check() {
+					var element = $("input[name='sex']:checked");
+					if (element.length==0) alert("You didn`t choose sex");
+					else alert("You choosed " + element.get(0).value);
+					
+			}
+			
+			function changeVisibility() {
+			var elements = $("div:visible");
+			var hiddenElements = $("div:hidden");
+						
+			/*for (var i=0; i<elements.length; i++) {
+					elements[i].hide;
+						}
+				for (var i=0; i<hiddenElements.length; i++) {
+					hiddenElements.get(i).show;
+						}
+				*/
+				elements.hide();
+				hiddenElements.show();
+			}
+		</script>
+</head>
+<body>
+	
+		<form name ="myform" action="#" method="post">
+			<p>Your sex: </p>
+			<p>
+			<div style="display:inline"> 
+				<input type="radio" name="sex" value="male" />Man
+			
+			
+				<input type="radio" name="sex" value="female" />Female
+			</div>
+			</p>
+			
+		<p>
+		<div style="display:inline">
+			<input type="text" name="login" />
+		</div>
+		</p>
+		<p>
+		<div style="display:none">
+			<input type="button" value="Check form" onclick= "check()"/>
+		</div>
+		</p>
+		
+		<div>
+			<input type="button" value="Change Visibility" onclick= "changeVisibility()"/>
+		</div>
+				
+		
+		</form>
+		
+
+</body>
+</html>

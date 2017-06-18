@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+		function check() {
+		var element = $("input[name='gender']:checked");
+		if (element.length==0) alert("Вы не выбрали ничео");
+		else alert("вы выбрали " + element.get(0).value);
+}		
+</script>
+</head>
+<body>
+	
+		<form name="myform">
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+  <br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  <input type="button" name="firstname" value="Mickey" onclick="check()"><br>
+</form>
+<script type="text/javascript">
+		
+		var elements = $(":text");
+		
+		alert("вы выбрали " + elements.get(0).name);
+	
+</script>
+
+</body>
+</html>

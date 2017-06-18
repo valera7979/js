@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+			function check() {
+					var elements = $("input[type='text']");
+					var name = elements.get(0).value;
+					var email = elements.get(1).value;
+					var note = elements.get(2).value;
+					var al = "";
+					
+					if (!name.match(/^[a-z][a-zа-я0-9_-]{3,10}$/)) {
+					al +="LOGIN is not correct!!! " + "\n"; }
+					if (!email.match(/^([a-z0-9_\.-]+)@([a-z0-9\.-]+)\.([a-z\.]{2,6})$/)) {
+									// /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/  - copy from 
+									// https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149
+					al += "EMAIL is not correct!!!" + "\n";
+					}
+					if (al.length!=0) alert(al); 
+			}
+						
+		</script>
+</head>
+<body>
+	
+		<form name ="myform" action="#" method="post">
+			<p>Your name: </p>
+					 
+			<input type="text" name="name"  /><br>
+			email: <br>
+			<input type="text" name="name"  />
+					<br>
+			Note: <br>
+				
+			<input type="text" name="note" />
+		
+		</p>
+		<p>
+		<div >
+			<input type="button" value="Check form" onclick= "check()"/>
+		</div>
+		</p>
+		
+		
+		</form>
+		
+
+</body>
+</html>

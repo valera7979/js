@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+ 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+		var isImgPresent =false;
+		function incSize(event) {
+		//var width = Number(event.target.style.width.substring(0,event.target.style.width.length-2));
+		//event.target.style.width = 500 + "px";
+		
+		var src=event.target.src;
+		if (event.target.style.width=="100px"&&!isImgPresent) {
+		$("<img src=" + src + " style='width:500px; position: fixed; top: 20%; left: 30%;'/>").insertAfter("img:last");
+		isImgPresent=true;
+		}
+		//$(event.target).unbind();
+		if (event.target.style.width=="500px") {
+			$(this).remove();
+			isImgPresent=false;
+			}
+		}
+		
+		$(document).ready(function() {
+		$(document).on("click", "img", incSize);
+			
+			});
+		</script>
+</head>
+<body>
+	
+	<img src = "https://d.mradx.net/pictures/98/111987.jpeg" style="width:100px"/>
+	<img src = "https://d.mradx.net/pictures/67/A94F0D.jpeg" style="width:100px" />
+	
+	
+  		
+</body>
+</html>

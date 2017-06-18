@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+ 
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+				
+		function hide(event) {
+			var time = 2000;
+			$(event.target).parent().hide(time);
+			setTimeout(function(){
+			$(event.target).parent().remove()
+			},time);
+			setTimeout("alert('Блок удален')", time);
+		}
+		
+		$(document).ready(function() {
+		$(document).on("click", "#close", hide);
+			
+			});
+		</script>
+</head>
+<body>
+	
+	<div style="width:200px;height:150px">
+			<p id="close" style="text-align:right">X</p>
+		<p>США повинні допомагати із озброєнням українських військових задля протистояння російській агресії на Донбасі</p>
+	</div>
+	
+	<div style="width:200px;height:150px">
+			<p id="close" style="text-align:right">X</p>
+		<p>Служба безпеки має "підставити плече" правоохоронцям у питанні розкриття резонансних вбивств журналіста Павла Шеремета і політика Дениса Вороненкова</p>
+	</div>
+	
+	<div style="width:200px;height:150px">
+			<p id="close" style="text-align:right">X</p>
+		<p>Через відсутність ігрової практики у багатьох футболістів, головний тренер збірної України Андрій Шевченко має проблеми з вибором складу на Хорватію</p>
+	</div>	
+  		
+</body>
+</html>

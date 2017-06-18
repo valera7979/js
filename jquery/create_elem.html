@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+ 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+		
+
+		var elementsOnPage = 0;
+		
+		function drawDiv() {
+		
+
+		if (elementsOnPage==5)
+		$("form").append("<p>5 – это максимум!</p>");
+		else if (elementsOnPage>5) {}
+		else
+		$("body").append("<div style='width:"+$("#w").val() +"px; height:"+$("#h").val() +"px; background-color:"+$("#c").val() +"'>Определяет имя класса для элемента</div>");
+		
+		
+		elementsOnPage++;
+		
+		}
+			
+		</script>
+</head>
+<body>
+	
+	
+	<form class = "form-vertical">
+	
+	 <div class="form-group">
+            <label class="control-label col-sm-1" >Height:</label>
+               <div class="col-sm-2">
+                    <input path="name" type="text" class="form-control" id="h" placeholder="Enter your name"/>
+                </div>
+				
+			<label class="control-label col-sm-1" >Width:</label>
+               <div class="col-sm-2">
+                    <input path="name" type="text" class="form-control" id="w" placeholder="Enter your name"/>
+                </div>
+				
+			<label class="control-label col-sm-1" >Color:</label>
+               <div class="col-sm-2">
+                    <input path="name" type="text" class="form-control" id="c" placeholder="Enter your name"/>
+                </div>
+				
+				<div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-1">
+                            <input type="button" class="btn btn-success" onclick="drawDiv()" value="Submit">
+                        </div>
+                    </div>
+     </div>
+	</form>
+	
+
+  		
+</body>
+</html>

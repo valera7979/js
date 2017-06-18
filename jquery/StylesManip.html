@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+		
+		function larger() {
+				var size = parseInt($("p").css('font-size'));
+				$("p").css("font-size", size +1);
+		}
+		
+		function smaller() {
+				var size = parseInt($("p").css('font-size'));
+				$("p").css("font-size", size -1);
+				
+		}
+		
+		</script>
+</head>
+<body>
+	
+	<p >деформационному упрочнению ОЦК-металлов и обобщающую статью
+	... энергии дефекта упаковки и типа ... дефекта упаковки γ для разных типов
+	..... дели предсказывают одинаковое влияние энергии дефекта упаковки на ха
+	</p>
+	
+	<a href ="#" onclick="larger()">крупнее </a><br> <br>
+	<a href="#" onclick="smaller()">мельче</a>
+		
+</body>
+</html>

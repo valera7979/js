@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript">
+
+        function checkFields() {
+            var radio = $("input[name='role']:checked").val();
+            var text = $("#t").val();
+
+            $("form").append("<div><p>" + radio + ": " + text + "</p></div>");
+        }
+
+    </script>
+</head>
+<body>
+
+<form>
+    <div>
+        <input type="radio" name="role" value="User"/> User
+        <input type="radio" name="role" value="Admin"/> Admin
+        <input type="text" id="t" placeholder="Enter your name"/>
+        <input type="button" onclick="checkFields()" value="Submit">
+    </div>
+</form>
+
+</body>
+</html>

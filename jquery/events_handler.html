@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+ 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+		function incSize(event) {
+		var width = Number(event.target.style.width.substring(0,event.target.style.width.length-2));
+		event.target.style.width = (width + 1) + "px";
+		$("<p>Mouse Coordinates: " + event.screenX + ", " + event.screenY + "</p>").insertAfter("div:last");
+		//$(event.target).unbind();
+		}
+		
+		$(document).ready(function() {
+		$("div").bind("mousemove", incSize);
+		$(document).on("click","p",function() {
+			alert();
+		});
+			});
+		</script>
+</head>
+<body>
+	
+	<div style="width:50px;height:50px;background-color:red;"></div>
+	<div style="width:50px;height:50px;background-color:green;"></div>
+	<div style="width:50px;height:50px;background-color:yellow;"></div>
+	
+	<p>Paragraph</p>
+  		
+</body>
+</html>

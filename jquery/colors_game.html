@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+ 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+	
+		function getColor() {
+		var num = Math.random();
+		var color;
+		if (num<0.17)
+			color = "#DC143C";
+			else if (num<0.34)
+			color = "#DAA520";
+			else if (num<0.51)
+			color = "#FFFF00";
+			else if (num<0.68)
+			color = "#800080";
+			else if (num<0.85)
+			color = "#7FFF00";
+			else 
+			color = "#006400";		
+	return color;			
+		}
+			
+		</script>
+</head>
+<body>
+
+<div id = "colors" style='width:200px; height:200px;'></div>
+	<script>
+	
+	$(document).ready(function() {	
+	for (var i=0; i<10; i++)
+		for (var j=0; j<10; j++) 
+			$("#colors").append("<div style='float:left;  width:20px; height:20px; background-color:"+getColor() +";'</div>");
+				});
+	
+</script>	
+
+</body>
+</html>

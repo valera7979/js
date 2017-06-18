@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript">
+			function check() {
+					var element = $("input[name='sex']:checked");
+					if (element.length==0) alert("You didn`t choose sex");
+					else alert("You choosed " + element.get(0).value);
+					
+			}
+		</script>
+</head>
+<body>
+
+		<form name ="myform" action="#" method="post">
+			<p>Your sex: </p>
+			<p>
+				<input type="radio" name="sex" value="male" />Man
+				<input type="radio" name="sex" value="female" />Female
+			</p>
+			
+		<p>
+			<input type="text" name="login" value="gfhgfh"/>
+		</p>
+		<p>
+			<input type="button" value="Check form" onclick= "check()"/>
+		</p>
+				
+		
+		</form>
+		<script type="text/javascript">
+			
+					var element = $(":text");
+					alert(element.get(0).value);
+					
+			
+		</script>
+
+</body>
+</html>
